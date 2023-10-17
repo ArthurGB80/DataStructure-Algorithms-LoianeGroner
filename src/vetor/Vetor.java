@@ -1,7 +1,5 @@
 package vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
 
     private String[] elementos;
@@ -9,6 +7,7 @@ public class Vetor {
 
     public Vetor(int capacidade) {
         this.elementos = new String[capacidade];
+        this.tamanho = 0;
     }
 
     /*
@@ -42,6 +41,13 @@ public class Vetor {
         return false;
     }
 
+    public String busca(int posicao) {
+        if (!(posicao >= 0 && posicao < tamanho)) {
+            throw new IllegalArgumentException("Posicao invalida");
+        }
+        return this.elementos[posicao];
+    }
+
     public int tamanho() {
         return this.tamanho;
     }
@@ -65,7 +71,5 @@ public class Vetor {
 
         return s.toString();
     }
-
-
 
 }
