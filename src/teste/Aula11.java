@@ -1,16 +1,16 @@
 package teste;
 
-import vetor.VetorObjetos;
+import vetor.Lista;
 
 public class Aula11 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        VetorObjetos vetor = new VetorObjetos();
+        Lista<Contato> vetor = new Lista<>(1);
 
-        vetor.adiciona(1);
-        vetor.adiciona("Elemento 2");
+        Contato c1 = new Contato("Contato 1", "1234-5678", "j1@j.com");
+
+        vetor.adiciona(c1);
 
     }
-
 }
